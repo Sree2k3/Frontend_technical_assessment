@@ -64,6 +64,7 @@ export const BaseNode = ({
         window.innerWidth - tooltipHalfWidth
       ),
       top: Math.max(buttonBounds.top - 10, 76),
+      isDarkMode: Boolean(document.querySelector('.app-shell--dark')),
     });
   };
 
@@ -154,7 +155,7 @@ export const BaseNode = ({
 
       {infoTooltipPosition && createPortal(
         <span
-          className="pipeline-node__info-popover pipeline-node__info-popover--portal"
+          className={`pipeline-node__info-popover pipeline-node__info-popover--portal${infoTooltipPosition.isDarkMode ? ' pipeline-node__info-popover--dark' : ''}`}
           role="tooltip"
           style={{
             left: infoTooltipPosition.left,

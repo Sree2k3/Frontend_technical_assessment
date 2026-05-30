@@ -1014,6 +1014,21 @@ code {
   margin-top: -8px;
 }
 
+.pipeline-node__info-popover--dark {
+  border-color: #3f3f46;
+  color: #f8fafc;
+  background: #18181b;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.48),
+    0 0 18px rgba(244, 244, 245, 0.12);
+}
+
+.pipeline-node__info-popover--dark::after {
+  border-right-color: #3f3f46;
+  border-bottom-color: #3f3f46;
+  background: #18181b;
+}
+
 @keyframes pipeline-info-popover-enter {
   from {
     opacity: 0;
